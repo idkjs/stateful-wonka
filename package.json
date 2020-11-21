@@ -27,7 +27,7 @@
     "@typescript-eslint/parser": "^3.3.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.0.1",
-    "bs-platform": "^7.3.2",
+    "bs-platform": "^8.3.3",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",

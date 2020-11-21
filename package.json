@@ -39,6 +39,6 @@
     "typescript": "^3.9.5"
   },
   "dependencies": {
-    "wonka": "^4.0.14"
+    "wonka": "^5.0.0-rc.1"
   }
 }

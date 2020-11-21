@@ -38,3 +38,5 @@ let sync = makeAction(DoubleCount) |> dispatch;
 let async = asyncUpdate() |> dispatch;
 
 let promise = promiseUpdate() |> dispatch;
+
+sync

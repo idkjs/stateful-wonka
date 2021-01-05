@@ -11,6 +11,11 @@
       "type": "dev"
     },
     {
+      "dir": "demo",
+      "subdirs": true,
+      "type": "dev"
+    },
+    {
       "dir": "test",
       "type": "dev"
     }

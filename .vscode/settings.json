@@ -4,5 +4,9 @@
     "**/*.gen.tsx": true
   },
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "ocaml.sandbox": {
+    "kind": "opam",
+    "switch": "default"
+  }
 }

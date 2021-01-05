@@ -3,11 +3,12 @@
   "sources": [
     {
       "dir": "src",
-      "subdirs": true
+      "files": [ "Reducer.res" ]
     },
     {
       "dir": "examples",
-      "subdirs": true
+      "files": [ "Simple.res" ],
+      "type": "dev"
     },
     {
       "dir": "test",
@@ -19,13 +20,13 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": ["wonka"],
-  "bs-dev-dependencies": ["@glennsl/bs-jest"],
-  "bsc-flags": ["-bs-super-errors"],
+  "bs-dependencies": [ "wonka" ],
+  "bs-dev-dependencies": [ "@glennsl/bs-jest" ],
+  "bsc-flags": [ "-bs-super-errors" ],
   "warnings": {
     "error": "+5"
   },
-  "namespace": true,
+  "namespace": "Stateful",
   "refmt": 3,
   "gentypeconfig": {
     "language": "typescript",

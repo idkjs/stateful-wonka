@@ -4,7 +4,7 @@
 var Jest = require("@glennsl/bs-jest/src/jest.bs.js");
 var Curry = require("bs-platform/lib/js/curry.js");
 var Wonka = require("wonka/src/Wonka.bs.js");
-var Reducer$StatefulWonka = require("../src/Reducer.bs.js");
+var Reducer$Stateful = require("../src/Reducer.bs.js");
 
 function call(self, arg) {
   return self.call(undefined, arg);
@@ -30,7 +30,7 @@ Jest.describe("Reducer", (function (param) {
         };
         return Jest.describe("reduce()", (function (param) {
                       Jest.test("creates a dispatcher that handles events", (function (param) {
-                              var dispatch = Reducer$StatefulWonka.reduce(reducer, {
+                              var dispatch = Reducer$Stateful.reduce(reducer, {
                                     count: 1
                                   });
                               var result = Wonka.toArray(Curry._1(dispatch, Wonka.fromValue({
@@ -42,7 +42,7 @@ Jest.describe("Reducer", (function (param) {
                                           }], Jest.ExpectJs.expect(result));
                             }));
                       Jest.testPromise("creates a dispatcher that handles async events", undefined, (function (param) {
-                              var dispatch = Reducer$StatefulWonka.reduce(reducer, {
+                              var dispatch = Reducer$Stateful.reduce(reducer, {
                                     count: 1
                                   });
                               var expectResult = function (result) {
@@ -56,7 +56,7 @@ Jest.describe("Reducer", (function (param) {
                                                   }))).then(expectResult);
                             }));
                       Jest.testPromise("creates a dispatcher that handles promised events", undefined, (function (param) {
-                              var dispatch = Reducer$StatefulWonka.reduce(reducer, {
+                              var dispatch = Reducer$Stateful.reduce(reducer, {
                                     count: 2
                                   });
                               var expectResult = function (result) {
@@ -70,7 +70,7 @@ Jest.describe("Reducer", (function (param) {
                                                   }))).then(expectResult);
                             }));
                       Jest.test("handles multiple events", (function (param) {
-                              var dispatch = Reducer$StatefulWonka.reduce(reducer, {
+                              var dispatch = Reducer$Stateful.reduce(reducer, {
                                     count: 1
                                   });
                               var result = Wonka.toArray(Curry._1(dispatch, Wonka.fromArray([
@@ -100,7 +100,7 @@ Jest.describe("Reducer", (function (param) {
                                         ], Jest.ExpectJs.expect(result));
                             }));
                       Jest.testPromise("handles multiple async events", undefined, (function (param) {
-                              var dispatch = Reducer$StatefulWonka.reduce(reducer, {
+                              var dispatch = Reducer$Stateful.reduce(reducer, {
                                     count: 1
                                   });
                               var mock = jest.fn();
@@ -136,7 +136,7 @@ Jest.describe("Reducer", (function (param) {
                                                       ])))).then(expectCalls);
                             }));
                       return Jest.testPromise("handles multiple promised events", undefined, (function (param) {
-                                    var dispatch = Reducer$StatefulWonka.reduce(reducer, {
+                                    var dispatch = Reducer$Stateful.reduce(reducer, {
                                           count: 2
                                         });
                                     var mock = jest.fn();
